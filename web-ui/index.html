@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 Car + Brushless + Brush Servo</title>
+  <style>
+    body { font-family: Arial; text-align:center; background:#eef; padding:30px; }
+    h2 { color:#333; }
+    button { width:120px; height:50px; font-size:18px; margin:8px; border:none; border-radius:10px; background:#0078D7; color:white; }
+    button:hover { background:#005fa3; }
+    input[type=range] { width:80%; height:40px; margin-top:15px; }
+    .val { font-size:1.3em; color:#0078D7; }
+    .grid { display:grid; grid-template-columns: 1fr 1fr 1fr; justify-items:center; margin:20px auto; max-width:400px; }
+  </style>
+</head>
+<body>
+  <h2>🚗 ESP32 Car + 🌀 Brushless + 🧹 Brush Servo</h2>
+
+  <div class="grid">
+    <div></div>
+    <button onclick="move('forward')">↑ Forward</button>
+    <div></div>
+
+    <button onclick="move('left')">← Left</button>
+    <button onclick="move('stop')">⏹ Stop</button>
+    <button onclick="move('right')">→ Right</button>
+
+    <div></div>
+    <button onclick="move('backward')">↓ Back</button>
+    <div></div>
+  </div>
+
+  <hr>
+  <h3>Brushless Motor Control</h3>
+  <input type="range" min="0" max="100" value="0" id="slider" oninput="update(this.value)">
+  <p>Throttle: <span id="val" class="val">0</span>%</p>
+
+  <hr>
+  <h3>🧹 Brush Servos</h3>
+  <button onclick="toggleBrush()">Brush ON/OFF</button>
+
+<script>
+function move(dir){
+  fetch('/move?dir='+dir);
+}
+function update(v){
+  document.getElementById('val').innerText=v;
+  fetch('/set?value='+v);
+}
+function toggleBrush(){
+  fetch('/brush');
+}
+</script>
+</body>
+</html>

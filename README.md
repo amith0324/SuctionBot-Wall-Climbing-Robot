@@ -49,8 +49,8 @@ Department of AI & ML
 ## 🎥 Project Demo Videos
 
 ### ▶️ Demo Video 1 – Robot Movement & Control
-🔗 https://drive.google.com/file/d/16ZK8imTeu2A2YsLK4dY7qls8TMPaR2v0/view?usp=drivesdk
+🔗 https://drive.google.com/file/d/1kStkR9kobRzYpDLo8KbhXROYhI0yNmaL/view?usp=drivesdk
 
 ### ▶️ Demo Video 2 – Suction & Cleaning Mechanism
-🔗 https://drive.google.com/file/d/1Bb6Jw-GkffFYR0HJSWbIYytkA32tqT8c/view?usp=drivesdk
+🔗 https://drive.google.com/file/d/1aFzTHUN8Zyt3VN_nrakleBzzhJFCe4Un/view?usp=drivesdk
 
